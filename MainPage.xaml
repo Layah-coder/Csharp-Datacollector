@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="DataCollector.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DataCollector"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="Data_Collector">
+        <TextBlock x:Name="informationLabel" Text="This programs collects measurements. Select the unit you would like and click 'Start' to generate data. Click 'Stop' to cease data collection. While collecting data you may choose to view data in Imperial or Metric units. Select a unit and click 'Show Current Measurement' to convert value." TextWrapping="Wrap" Margin="32,33,606,599"/>
+        <RadioButton x:Name="metricRadioButton" Content="Metric (cm)" Margin="43,179,0,0" VerticalAlignment="Top" GroupName="units"/>
+        <RadioButton x:Name="imperialRadioButton" Content="Imperial (inch)" Margin="43,136,0,0" VerticalAlignment="Top" IsChecked="True" GroupName="units"/>
+        <TextBlock x:Name="resultLabel" Text="" TextWrapping="Wrap" Margin="254,278,945,415"/>
+        <TextBlock x:Name="currentMeasurementLabel" Text="Current Measurement:" TextWrapping="Wrap" Margin="79,278,1050,419"/>
+        <Button x:Name="currentMeasurementButton" Content="Show Current Measurement" Margin="254,228,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.242,0.562" Click="currentMeasurementClick"/>
+        <Button x:Name="historyButton" Content="Measurement History" Height="34" Margin="74,379,0,0" VerticalAlignment="Top" Width="180" Click="historyButton_Click"/>
+        <Button Content="Start" Height="43" Margin="168,141,0,0" VerticalAlignment="Top" Width="113" Click="startClick"/>
+        <Button Content="Stop" Height="43" Margin="315,141,0,0" VerticalAlignment="Top" Width="113" Click="stopClick"/>
+        <TextBlock x:Name="historyText" HorizontalAlignment="Left" Height="275" Margin="79,424,0,0" Text="Measurement history" TextWrapping="Wrap" VerticalAlignment="Top" Width="138"/>
+        <TextBlock x:Name="timeStampLabel" Text="" TextWrapping="Wrap" Margin="254,316,945,377"/>
+        <TextBlock x:Name="timeLabel" Text="Time Taken:" TextWrapping="Wrap" Margin="144,316,1052,374"/>
+
+    </Grid>
+</Page>
